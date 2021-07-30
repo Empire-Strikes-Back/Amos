@@ -1,0 +1,5 @@
+[user]
+	email = ipfs-libraries@libraries
+	name = ipfs-libraries
+
+# git config --local include.path ../.gitconfig
