@@ -1,4 +1,4 @@
-we are ipfs-libraries  - ipfs and libp2p libraries
+we are knight  - ipfs and libp2p libraries
 
 our language is clojure
 we run on jvm
