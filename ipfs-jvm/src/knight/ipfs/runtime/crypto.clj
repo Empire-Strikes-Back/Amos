@@ -1,8 +1,8 @@
-(ns cljctools.ipfs.runtime.crypto
+(ns knight.ipfs.runtime.crypto
   (:require
-   [cljctools.bytes.runtime.core :as bytes.runtime.core]
-   [cljctools.ipfs.protocols :as ipfs.protocols]
-   [cljctools.ipfs.spec :as ipfs.spec]
+   [knight.bytes.runtime.core :as bytes.runtime.core]
+   [knight.ipfs.protocols :as ipfs.protocols]
+   [knight.ipfs.spec :as ipfs.spec]
    [clojure.java.io :as io :refer [input-stream]])
   (:import
    (java.security PrivateKey PublicKey SecureRandom Security MessageDigest Signature KeyPairGenerator KeyPair KeyFactory Provider)
@@ -19,7 +19,7 @@
    (org.bouncycastle.asn1 ASN1Primitive)
    (com.google.protobuf ByteString)
    (org.bouncycastle.jcajce.provider.digest SHA3 SHA3$Digest224 SHA3$Digest256 SHA3$Digest384 SHA3$Digest512)
-   (cljctools.ipfs.runtime NodeProto NodeProto$KeyType NodeProto$PrivateKey NodeProto$PublicKey)))
+   (knight.ipfs.runtime NodeProto NodeProto$KeyType NodeProto$PrivateKey NodeProto$PublicKey)))
 
 (do (set! *warn-on-reflection* true) (set! *unchecked-math* true))
 
@@ -274,10 +274,10 @@
 (comment
 
   (require
-   '[cljctools.bytes.runtime.core :as bytes.runtime.core]
-   '[cljctools.ipfs.protocols :as ipfs.protocols]
-   '[cljctools.ipfs.spec :as ipfs.spec]
-   '[cljctools.ipfs.runtime.crypto :refer [generate-keypair
+   '[knight.bytes.runtime.core :as bytes.runtime.core]
+   '[knight.ipfs.protocols :as ipfs.protocols]
+   '[knight.ipfs.spec :as ipfs.spec]
+   '[knight.ipfs.runtime.crypto :refer [generate-keypair
                                            protobuf-encode-private-key
                                            protobuf-decode-private-key
                                            protobuf-encode-public-key

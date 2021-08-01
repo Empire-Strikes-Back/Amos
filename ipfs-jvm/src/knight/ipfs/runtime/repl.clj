@@ -1,17 +1,17 @@
-(ns cljctools.ipfs.runtime.repl
+(ns knight.ipfs.runtime.repl
   (:require
    [clojure.core.async :as a :refer [chan go go-loop <! >! take! put! offer! poll! do-alts alt! alts! close!
                                      pub sub unsub mult tap untap mix admix unmix pipe
                                      timeout to-chan  sliding-buffer dropping-buffer
                                      pipeline pipeline-async]]
 
-   [cljctools.bytes.protocols :as bytes.protocols]
-   [cljctools.bytes.runtime.core :as bytes.runtime.core]
-   [cljctools.varint.core :as varint.core]
+   [knight.bytes.protocols :as bytes.protocols]
+   [knight.bytes.runtime.core :as bytes.runtime.core]
+   [knight.varint.core :as varint.core]
 
-   [cljctools.ipfs.runtime.crypto :as ipfs.runtime.crypto]
-   [cljctools.ipfs.protocols :as ipfs.protocols]
-   [cljctools.ipfs.spec :as ipfs.spec])
+   [knight.ipfs.runtime.crypto :as ipfs.runtime.crypto]
+   [knight.ipfs.protocols :as ipfs.protocols]
+   [knight.ipfs.spec :as ipfs.spec])
   (:import
    (io.ipfs.multiaddr MultiAddress)
    (io.ipfs.multibase Multibase Base58)
@@ -36,7 +36,7 @@
    (io.netty.buffer ByteBuf ByteBufUtil Unpooled)
    (java.util.concurrent CompletableFuture TimeUnit)
    (com.google.protobuf ByteString)
-   (cljctools.ipfs.runtime NodeProto$DhtMessage NodeProto$DhtMessage$Type)))
+   (knight.ipfs.runtime NodeProto$DhtMessage NodeProto$DhtMessage$Type)))
 
 (do (set! *warn-on-reflection* true) (set! *unchecked-math* true))
 
@@ -181,16 +181,16 @@
 (comment
 
   (require
-   '[cljctools.bytes.runtime.core :as bytes.runtime.core]
-   '[cljctools.codec.runtime.core :as codec.runtime.core]
-   '[cljctools.varint.core :as varint.core]
-   '[cljctools.ipfs.protocols :as ipfs.protocols]
-   '[cljctools.ipfs.spec :as ipfs.spec]
-   '[cljctools.ipfs.runtime.crypto :as ipfs.runtime.crypto]
-   '[cljctools.ipfs.runtime.impl :as ipfs.runtime.impl]
-   '[cljctools.ipfs.runtime.core :as ipfs.runtime.core]
-   '[cljctools.ipfs.runtime.node :as ipfs.runtime.node]
-   '[cljctools.ipfs.runtime.repl :as ipfs.runtime.repl]
+   '[knight.bytes.runtime.core :as bytes.runtime.core]
+   '[knight.codec.runtime.core :as codec.runtime.core]
+   '[knight.varint.core :as varint.core]
+   '[knight.ipfs.protocols :as ipfs.protocols]
+   '[knight.ipfs.spec :as ipfs.spec]
+   '[knight.ipfs.runtime.crypto :as ipfs.runtime.crypto]
+   '[knight.ipfs.runtime.impl :as ipfs.runtime.impl]
+   '[knight.ipfs.runtime.core :as ipfs.runtime.core]
+   '[knight.ipfs.runtime.node :as ipfs.runtime.node]
+   '[knight.ipfs.runtime.repl :as ipfs.runtime.repl]
    :reload)
 
   (do
@@ -274,16 +274,16 @@
                                         pub sub unsub mult tap untap mix admix unmix pipe
                                         timeout to-chan  sliding-buffer dropping-buffer
                                         pipeline pipeline-async]]
-     '[cljctools.bytes.runtime.core :as bytes.runtime.core]
-     '[cljctools.codec.runtime.core :as codec.runtime.core]
-     '[cljctools.varint.core :as varint.core]
-     '[cljctools.ipfs.protocols :as ipfs.protocols]
-     '[cljctools.ipfs.spec :as ipfs.spec]
-     '[cljctools.ipfs.runtime.crypto :as ipfs.runtime.crypto]
-     '[cljctools.ipfs.runtime.impl :as ipfs.runtime.impl]
-     '[cljctools.ipfs.runtime.core :as ipfs.runtime.core]
-     '[cljctools.ipfs.runtime.node :as ipfs.runtime.node]
-     '[cljctools.ipfs.runtime.repl :as ipfs.runtime.repl]
+     '[knight.bytes.runtime.core :as bytes.runtime.core]
+     '[knight.codec.runtime.core :as codec.runtime.core]
+     '[knight.varint.core :as varint.core]
+     '[knight.ipfs.protocols :as ipfs.protocols]
+     '[knight.ipfs.spec :as ipfs.spec]
+     '[knight.ipfs.runtime.crypto :as ipfs.runtime.crypto]
+     '[knight.ipfs.runtime.impl :as ipfs.runtime.impl]
+     '[knight.ipfs.runtime.core :as ipfs.runtime.core]
+     '[knight.ipfs.runtime.node :as ipfs.runtime.node]
+     '[knight.ipfs.runtime.repl :as ipfs.runtime.repl]
      :reload)
     (import
      '(io.libp2p.core Connection Host PeerId Stream)
@@ -309,7 +309,7 @@
      '(io.libp2p.discovery MDnsDiscovery)
      '(kotlin.jvm.functions Function1)
      '(com.google.protobuf ByteString)
-     '(cljctools.ipfs.runtime NodeProto$DhtMessage NodeProto$DhtMessage$Type NodeProto$DhtMessage$Peer)))
+     '(knight.ipfs.runtime NodeProto$DhtMessage NodeProto$DhtMessage$Type NodeProto$DhtMessage$Peer)))
 
   (do
     (def ping (Ping.))

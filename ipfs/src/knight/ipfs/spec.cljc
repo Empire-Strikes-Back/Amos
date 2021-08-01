@@ -1,7 +1,7 @@
-(ns cljctools.ipfs.spec
+(ns knight.ipfs.spec
   (:require
    [clojure.spec.alpha :as s]
-   [cljctools.ipfs.protocols :as ipfs.protocols]))
+   [knight.ipfs.protocols :as ipfs.protocols]))
 
 (s/def ::peer-id #(and
                    (satisfies? ipfs.protocols/PeerId %)
