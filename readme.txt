@@ -1,5 +1,4 @@
-we are knight  - ipfs and libp2p libraries
+i am knight program
 
-our language is clojure
-we run on jvm
-we have one protocol, one encryption - pick one (like bittorrent) and focus on user programs, not swiss army knife bloated tooling (multics vs unix all over again..)
+my language is clojure
+i run on jvm
