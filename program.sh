@@ -17,16 +17,5 @@ main(){
     -M -m knight.main
 }
 
-uberjar(){
-  clojure \
-    -X:uberjar hf.depstar/uberjar \
-    :aot true \
-    :jar out/knight.standalone.jar \
-    :verbose false \
-    :main-class knight.main
-  mkdir -p out/jpackage-input
-  mv out/knight.standalone.jar out/jpackage-input/
-}
-
 
 "$@"
