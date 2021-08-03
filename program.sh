@@ -28,5 +28,30 @@ uberjar(){
   mv out/knight.standalone.jar out/jpackage-input/
 }
 
+j-package(){
+  OS=${1:?"Need OS type (windows/linux/mac)"}
+
+  echo "Starting compilation..."
+
+  if [ "$OS" == "windows" ]; then
+    J_ARG="--win-menu --win-dir-chooser --win-shortcut"
+          
+  elif [ "$OS" == "linux" ]; then
+      J_ARG="--linux-shortcut"
+  else
+      J_ARG=""
+  fi
+
+  jpackage \
+    --input out/jpackage-input \
+    --dest out \
+    --main-jar knight.standalone.jar \
+    --name "knight" \
+    --main-class clojure.main \
+    --arguments -m \
+    --arguments knight.main \
+    --app-version "1" \
+    $J_ARG
+}
 
 "$@"
