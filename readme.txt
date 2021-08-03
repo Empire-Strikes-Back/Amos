@@ -1,4 +1,5 @@
-i am knight program - i am game
+we are knight  - ipfs and libp2p libraries
 
-my language is clojure
-i run on jvm
+our language is clojure
+we run on jvm
+we have one protocol, one encryption - pick one (like bittorrent) and focus on user programs, not swiss army knife bloated tooling (multics vs unix all over again..)

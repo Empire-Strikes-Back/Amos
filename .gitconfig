@@ -1,5 +1,5 @@
 [user]
-	email = knight@program
+	email = knight@libraries
 	name = knight
 
 # git config --local include.path ../.gitconfig
