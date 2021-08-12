@@ -1,4 +1,4 @@
-{:paths ["source"]
+{:paths ["src"]
  :deps {knight/ipfs {:local/root "../ipfs"}
         org.bouncycastle/bcprov-jdk15on {:mvn/version "1.69"}
         com.github.multiformats/java-multibase {:mvn/version "v1.1.0"}
